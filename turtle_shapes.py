@@ -56,11 +56,28 @@ def heart(color, fill_shape):
     if fill_shape == "yes":
         t.end_fill()
 
-# 6 Point STAR
-'''
+# 5 Point STAR
 def star(color, fill_shape):
     t.penup()
-    t.goto(-100,80)
+    t.goto(-10,-20)
+    t.pendown()
+    t.color(color)
+
+    if fill_shape == "yes":
+        t.begin_fill()
+
+# Math for degrees 360 / 5 x 2 == 144
+    for i in range(5):
+        t.forward(100)
+        t.right(144)
+
+    if fill_shape == "yes":
+        t.end_fill()
+
+''' 6 Point STAR
+def star6(color, fill_shape):
+    t.penup()
+    t.goto(0,-80)
     t.pendown()
     t.color(color)
 
@@ -68,10 +85,14 @@ def star(color, fill_shape):
         t.begin_fill()
 
     for i in range(6):
-        t.forward(144)
+        t.forward(100)
         t.left(60)
-        t.forward(144)
+        t.forward(100)
         t.right(120)
+
+    if fill_shape == "yes":
+        t.end_fill()
+    
 '''
 
 # process 
@@ -84,4 +105,7 @@ elif shape_selection == "heart":
 elif shape_selection == "star":
     star(shape_color, shape_fill)
 
+else:
+    print("Invalid selections")
+    
 t.done()
