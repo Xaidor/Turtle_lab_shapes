@@ -7,7 +7,7 @@ shape_fill = str()
 
 # Grab input from user. Ask user to select a shape, color, and decide if they want the shape filled.
 shape_selection = input("Select a shape (heart, star, square): ")
-shape_color = input("What color would you like your shape to be? (square, star, heart): ")
+shape_color = input("What color would you like your shape to be? ")
 shape_fill = input("Would you like to be filled? (yes/no): ")
 
 # Create functions for each shape. Square, heart, and star.
@@ -56,23 +56,23 @@ def heart(color, fill_shape):
     if fill_shape == "yes":
         t.end_fill()
 
-# STAR
+# 6 Point STAR
+'''
 def star(color, fill_shape):
     t.penup()
-    t.goto(-50,0)
+    t.goto(-100,80)
     t.pendown()
     t.color(color)
 
     if fill_shape == "yes":
         t.begin_fill()
 
-    t.left(180)
-    t.forward(120)
-
-    for i in range(5):
-        t.right(144)
-        t.forward(120)
-        t.left(133)
+    for i in range(6):
+        t.forward(144)
+        t.left(60)
+        t.forward(144)
+        t.right(120)
+'''
 
 # process 
 if shape_selection == "square":
