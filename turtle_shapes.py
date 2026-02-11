@@ -12,13 +12,18 @@ shape_color = input("What color would you like your shape to be? ")
 shape_fill = input("Would you like to be filled? (yes/no): ")
 
 # Create functions for each shape. Square, heart, and star.
-def square(color, fill):
-    if fill == "yes":
+def square(color, fill_shape):
+    t.color(color)
+    if fill_shape == "yes":
         t.begin_fill()
 
     for i in range(4):
-        t.color(color)
-        t.
+        t.forward(100)
+        t.right(90)
+
+    if fill_shape == "yes":
+        t.end_fill()
+        
     
 
 

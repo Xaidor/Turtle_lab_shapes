@@ -26,7 +26,14 @@ if select_shape == "square":
         t.forward(100)
         t.right(90)
 
+elif select_shape == "star":
+    t.penup()
+    t.goto(0,-50)
+    t.pendown()
 
+    for i in range(5):
+        t.forward(100)
+        t.right(144)
 
 # Draw circle for sun
 
