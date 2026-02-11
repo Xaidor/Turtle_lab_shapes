@@ -56,6 +56,23 @@ def heart(color, fill_shape):
     if fill_shape == "yes":
         t.end_fill()
 
+# STAR
+def star(color, fill_shape):
+    t.penup()
+    t.goto(-50,0)
+    t.pendown()
+    t.color(color)
+
+    if fill_shape == "yes":
+        t.begin_fill()
+
+    t.left(180)
+    t.forward(120)
+
+    for i in range(5):
+        t.right(144)
+        t.forward(120)
+        t.left(133)
 
 # process 
 if shape_selection == "square":
@@ -64,5 +81,7 @@ if shape_selection == "square":
 elif shape_selection == "heart":
     heart(shape_color, shape_fill)
     
+elif shape_selection == "star":
+    star(shape_color, shape_fill)
 
 t.done()
