@@ -60,6 +60,9 @@ def heart(color, fill_shape):
 # process 
 if shape_selection == "square":
     square(shape_color, shape_fill)
+
+elif shape_selection == "heart":
+    heart(shape_color, shape_fill)
     
 
 t.done()
