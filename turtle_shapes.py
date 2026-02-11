@@ -1,6 +1,5 @@
 # Import Librarys 
 import turtle as t
-import random as r
 
 shape_selection = str()
 shape_color = str()
@@ -23,7 +22,10 @@ def square(color, fill_shape):
 
     if fill_shape == "yes":
         t.end_fill()
-        
+
+# process 
+if shape_selection == "square":
+    square(shape_color, shape_fill)
     
 
 
