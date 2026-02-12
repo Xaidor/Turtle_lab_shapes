@@ -44,6 +44,12 @@ elif select_shape == "sun":
 
     t.penup()
     t.goto(0,0)
+    
+    angle_rays = 360 / num_rays
+
+    for i in range(num_rays):
+        t.pendown()
+        t.forward(50)
 
 
 
