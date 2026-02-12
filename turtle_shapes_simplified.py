@@ -7,8 +7,8 @@ select_shape = str()
 select_color = str()
 
 # Input statement 
-select_shape = input("Select a shape (Star, Square, or Sun) ")
-select_color = input("What color would you like your shape? ")
+select_shape = input("Select a shape (Star, Square, or Sun) ").lower()
+select_color = input("What color would you like your shape? ").lower()
 
 # Set color
 t.color(select_color)
