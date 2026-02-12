@@ -39,6 +39,7 @@ elif select_shape == "sun":
     t.pendown()
     t.cirlce()
 
+# Add sun rays to circle
     num_rays = 10
     ray_length = 30
 
@@ -50,11 +51,10 @@ elif select_shape == "sun":
     for i in range(num_rays):
         t.pendown()
         t.forward(50)
+        t.forward(ray_length)
+        t.backward(50 + ray_length)
+        t.penup()
+        t.left(angle_rays) 
 
-
-
-# Add sun rays to circle
-
-
-
-# Output
+    else:
+        t.write("Invalid shape selected!")
