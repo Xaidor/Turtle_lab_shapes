@@ -37,6 +37,13 @@ elif select_shape == "sun":
     t.penup()
     t.goto(0,-50)
     t.pendown()
+    t.cirlce()
+
+    num_rays = 10
+    ray_length = 30
+
+    t.penup()
+    t.goto(0,0)
 
 
 
