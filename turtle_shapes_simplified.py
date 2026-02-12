@@ -1,6 +1,5 @@
 # Import Libraries 
 import turtle as t
-import random as r
 
 # Declare Variables Not needed, just for practice purposes
 select_shape = str()
@@ -57,7 +56,7 @@ elif select_shape == "sun":
         t.penup()
         t.left(angle_rays) 
     t.end_fill()
-    
+
 else:
     t.write("Invalid shape selected!")
 
