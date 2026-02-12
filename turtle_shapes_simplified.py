@@ -4,9 +4,6 @@ import random as r
 
 # Declare Variables Not needed, just for practice purposes
 select_shape = str()
-square_shape = str()
-star_shape = str()
-sun_shape = str()
 select_color = str()
 
 # Input statement 
@@ -36,6 +33,10 @@ elif select_shape == "star":
         t.right(144)
 
 # Draw circle for sun
+elif select_shape == "sun":
+    t.penup()
+    t.goto(0,-50)
+    t.pendown()
 
 
 
