@@ -7,7 +7,7 @@ select_shape = str()
 select_color = str()
 
 # Input statement 
-select_shape = input("Select a shape (Star, Square, or Sun) ").lower()
+select_shape = input("Select a shape (Star, Square, or Sun): ").lower()
 select_color = input("What color would you like your shape? ").lower()
 
 # Set color
@@ -37,7 +37,8 @@ elif select_shape == "sun":
     t.penup()
     t.goto(0,-50)
     t.pendown()
-    t.cirlce(50)
+    t.begin_fill()
+    t.circle(50)
 
 # Add sun rays to circle
     num_rays = 10
@@ -55,6 +56,9 @@ elif select_shape == "sun":
         t.backward(50 + ray_length)
         t.penup()
         t.left(angle_rays) 
+    t.end_fill()
+    
+else:
+    t.write("Invalid shape selected!")
 
-    else:
-        t.write("Invalid shape selected!")
+t.done()
